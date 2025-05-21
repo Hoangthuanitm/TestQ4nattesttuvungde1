@@ -1327,7 +1327,7 @@
             const section4Score = calculateRadioSectionScore(26, 30, 1);
             const section5Score = calculateRadioSectionScore(31, 35, 2);
             const totalScore = section1Score + section2Score + section3Score + section4Score + section5Score;
-            const percentage = Math.round((totalScore / 40) * 100);
+            const percentage = Math.round((totalScore / 100) * 100);
             const evaluation = getEvaluation(percentage);
             const rankClass = evaluation === 'A' ? 'rank-a' : evaluation === 'F' ? 'rank-f' : '';
 
