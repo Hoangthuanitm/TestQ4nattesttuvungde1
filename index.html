@@ -1177,10 +1177,10 @@
         }
 
         function getEvaluation(percentage) {
-            if (percentage >= 80) return 'A';
-            if (percentage >= 60) return 'B';
-            if (percentage >= 40) return 'C';
-            if (percentage >= 20) return 'D';
+            if (percentage >= 85) return 'A';
+            if (percentage >= 70) return 'B';
+            if (percentage >= 60) return 'C';
+            if (percentage >= 55) return 'D';
             return 'F';
         }
 
@@ -1327,7 +1327,7 @@
             const section4Score = calculateRadioSectionScore(26, 30, 1);
             const section5Score = calculateRadioSectionScore(31, 35, 2);
             const totalScore = section1Score + section2Score + section3Score + section4Score + section5Score;
-            const percentage = Math.round((totalScore / 100) * 100);
+            const percentage = Math.round((totalScore / 40) * 100);
             const evaluation = getEvaluation(percentage);
             const rankClass = evaluation === 'A' ? 'rank-a' : evaluation === 'F' ? 'rank-f' : '';
 
@@ -1357,7 +1357,7 @@
                             <td>${section3Score}/${sectionPoints[3]}</td>
                             <td>${section4Score}/${sectionPoints[4]}</td>
                             <td>${section5Score}/${sectionPoints[5]}</td>
-                            <td>${totalScore}/100</td>
+                            <td>${totalScore}/40</td>
                             <td>${percentage}%</td>
                             <td class="${rankClass}">${evaluation}</td>
                         </tr>
